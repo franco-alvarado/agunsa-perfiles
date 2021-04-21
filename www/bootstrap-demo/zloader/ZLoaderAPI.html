@@ -1,0 +1,22 @@
+<div>
+    <h3>Class ZAutoLoad extends ZCompoundComponent</h3>
+    <h4>HTML attributes</h4>
+    <ul>
+        <li>data-z-autoload="url": Initial loaded component. Use './path' to indicate relative url</li>
+    </ul>
+    <h4>Properties</h4>
+    <ul>
+        <li>[get] active: reference to current controller (read only, changed when 'load' is called)</li>
+    </ul>
+    <h4>Methods</h4>
+    <ul>
+        <li>load(url, options): Replace active controller. 'options' are passed to component in 'onThis_init(options)'. 
+            URL can start with './' relative to container component. Returns a Promise wich resolves to loaded controller</li>
+        <li>push(url, options): Loads and activate a new controller with transition and put it on top of the stack. Replaced controller
+            keeps its state until "pop" is called on zloader. Returns a Promise wich resolves to loaded controller.
+        </li>
+        <li>pop(steps = 1): Removes controller on top of the stack (or controllers) with transition. Returns a Promise wich
+            resolves to re-activated controller.
+        </li>
+    </ul>
+</div>

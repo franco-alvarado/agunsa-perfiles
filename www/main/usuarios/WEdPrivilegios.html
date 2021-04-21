@@ -1,0 +1,78 @@
+<div class='modal fade' tabindex='-1' aria-hidden="true">
+    <div class='modal-dialog modal-lg' role='document'>
+        <div class='modal-content'>
+            <div class=' modal-header bg-secondary text-white align-center '>
+                <h5 id="title" class="col-md-11 modal-title text-center pt-8 pb-0 mt-0 bt-0">Asignar Permisos a grupo</h5>
+                <button type='button' class=' col-xs close text-white' data-dismiss="modal"><span aria-hidden='true'>&times;</span></button>
+            </div>
+            <hr class="w-100 my-0" />
+            <div class='modal-body'>
+                <div id="mensajeError" class="alert alert-danger">
+                    <div class="container">
+                        <div class="alert-icon">
+                            <i class="material-icons">error_outline</i>
+                        </div>
+                        <b id="lblAccion">&nbsp;</b><span id="textoMensajeError"></span>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="container-fluid mt-0">
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <select id="edSistemas" class="custom-select" required data-style="btn btn-link"
+                                    data-z-id-field="codigo" data-z-label-field="nombre"></select>
+                            </div>
+                            <div class="invalid-feedback">Example invalid custom select feedback</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- LISTA DE PRIVILEGIOS POR SISTEMA-->
+                <div class="tab-pane fade show active" id="usuarios" role="tabpanel">
+                        <div class="card mt-1">
+                            <div class="navbar navbar-expand-sm bg-primary py-0">
+                                <div class="container">
+                                    <div class="navbar-brand"></div>
+                                    <h6 id="subtituloSistema" class='modal-title mt-0 mb-1'></h6>
+                                    <form class="form-inline ml-auto">
+                                       <div id="edFiltroPrivilegio" data-z-component="common/SearchField"></div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <table id="listaPrivilegios" data-z-table="true" class="table table-sm table-hover table-striped table-bordered img-raised"
+                                    data-z-edit-header-class="th-tabla-custom" data-z-edit-cell-class="td-tabla-custom pt-1"
+                                    data-z-selectable-row-class="table-primary" data-z-page-details="detalle-listaPrivilegios"
+                                    data-z-pager="paginador-listaPrivilegios" style="font-size:90%;">
+                                    <thead>
+                                        <tr class="tr font-weight-bold">
+                                            <th data-z-col="id" class="th-tabla-custom" data-z-cell-class="td-tabla-custom pt-1">Id</th>
+                                            <th data-z-col="codigo" class="th-tabla-custom" data-z-cell-class="td-tabla-custom pt-1">Código</th>
+                                            <th data-z-col="nombre" class="th-tabla-custom" data-z-cell-class="td-tabla-custom pt-1">Privilegio</th>
+                                            <!-- <th  data-z-col="edAsignado" class="th-tabla-custom text-center" data-z-cell-class="td-tabla-custom py-0 text-center">Asignar<div class='togglebutton'><label style='line-height:0.6;'><input name="checkedAll" id="checkedAll" type="checkbox"/><span class='toggle'></span></label></div></th> -->
+                                            <th  data-z-col="edAsignado" class="th-tabla-custom text-center" data-z-cell-class="td-tabla-custom py-0 text-center">Asignar</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                                <hr>
+                                <!-- <div class="row justify-content-center">
+                                    <small id="detalle-listaPrivilegios" class="form-text text-muted"></small>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <ul id="paginador-listaPrivilegios" class="pagination pagination-sm pagination-centered"
+                                        data-z-pagination="local" data-z-n-rows="10" data-z-n-pages="20"></ul>
+                                </div> -->
+                               
+                                
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class='modal-footer'>
+                <button id="cmdOk" class='btn btn-primary mr-2' type="button">Aceptar</button>
+                <button id="cmdCancel" class='btn btn-default' type="button">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>

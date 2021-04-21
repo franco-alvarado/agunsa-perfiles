@@ -1,0 +1,56 @@
+<div>
+    <div class="row mt-4">
+        <div class="col-sm-3"></div>
+        <div id="divForm" class="col-sm-6 card">
+            <form>
+                <div class="card-header card-header-primary text-center">
+                    <img class="float-left" src="img/logo-agunsa-transparente.png" height="40" />
+                    <h4 class="card-title">CMMS - Crear Contraseña</h4>
+                </div>
+                <div class="card-body">
+                    <p class="description text-center">Creación de Nueva Contraseña</p>
+                    <span class="form-group bmd-form-group is-focused">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                            <input id="edLogin" type="text" class="form-control" readonly="readonly" style="background-color: white;">
+                        </div>
+                    </span>
+                    <div class="alert alert-info mt-4 ml-4">
+                        <i class="fas fa-info mr-2"></i>
+                        El largo de la contraseña debe ser al menos 8 caracteres, debe contener mayúsculas, minúsculas y al menos un número
+                    </div>
+                    <span class="bmd-form-group">
+                        <div class="input-group mt-4 mb-4">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fas fa-unlock-alt"></i>
+                            </span>
+                            </div>
+                            <input id="edPwd1" type="password" class="form-control" placeholder="Escriba su nueva Contraseña">
+                        </div>
+                    </span>
+                    <span class="bmd-form-group">
+                        <div class="input-group mt-4 mb-4">
+                            <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fas fa-unlock-alt"></i>
+                            </span>
+                            </div>
+                            <input id="edPwd2" type="password" class="form-control" placeholder="Repita la nueva Contraseña">
+                        </div>
+                    </span>
+                </div>
+                <div id="divCmdCambiar" class="footer text-center">
+                    <button id="cmdCambiar" type="button" class="btn btn-primary btn-link btn-wd btn-lg">Crear
+                        <div class="ripple-container"></div>
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+</div>

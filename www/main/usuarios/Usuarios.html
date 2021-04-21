@@ -1,0 +1,46 @@
+<div class="container">
+        <div class="navbar navbar-expand-lg bg-primary py-0">
+            <div class="container align-middle">
+                <div class="navbar-brand ">
+                        <p class="h5">Usuarios del Sistema</p>
+                </div>
+                <form class="form-inline ml-auto">                    
+                    <button id="cmdAgregarUsuario" type="button" class="btn btn-sm btn-success mr-4 pt-2">
+                        Agregar Usuario
+                        <i class="fas fa-plus-square ml-2"></i>
+                    </button>
+                    <div id="edFiltro" data-z-component="common/SearchField"></div>
+                </form>
+            </div>
+        </div>
+        
+        <table id="listaUsuarios" data-z-table="true" class="table table-sm table-hover table-striped table-bordered img-raised" 
+            data-z-edit="true" 
+            data-z-edit-header-class="th-tabla-custom" 
+            data-z-edit-cell-class="td-tabla-custom pt-1" 
+            data-z-selectable-row-class="table-primary"
+            data-z-page-details="detalle-lista" 
+            data-z-pager="paginador-lista"
+            style="font-size:80%;"
+        >
+            <thead>
+                <tr class="tr-header-custom">
+                    <th data-z-col="login" class="th-tabla-custom" data-z-cell-class="td-tabla-custom pt-1" data-z-editable="true">Login</th>
+                    <th data-z-col="nombre" class="th-tabla-custom" data-z-cell-class="td-tabla-custom pt-1" data-z-editable="true">Nombre</th>
+                    <th data-z-col="email" class="th-tabla-custom" data-z-cell-class="td-tabla-custom pt-1">email</th>
+                    <th data-z-col="edActivo" class="th-tabla-custom" data-z-cell-class="td-tabla-custom py-0" style="width: 40px;">Activo</th>
+                    <th data-z-col="edAdmin" class="th-tabla-custom" data-z-cell-class="td-tabla-custom py-0" style="width: 40px;">Admin</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <hr>
+        
+        <div class="row justify-content-center">
+            <small id="detalle-lista" class="form-text text-muted"></small>
+        </div>
+        <div class="row justify-content-center">
+            <ul id="paginador-lista" class="pagination pagination-sm pagination-centered" data-z-pagination="local" data-z-n-rows="10" data-z-n-pages="20"></ul>
+        </div>
+        <br>
+    </div>

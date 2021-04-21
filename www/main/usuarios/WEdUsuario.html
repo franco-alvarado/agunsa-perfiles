@@ -1,0 +1,78 @@
+<div class='modal fade' tabindex='-1' aria-hidden="true">
+    <div class='modal-dialog modal-lg ' role='document'>
+        <div class='modal-content'>
+            <div class='modal-header'>
+                <h5 id="title" class='modal-title mt-0 mb-1'>[Acción] Usuario</h5>
+                <button type='button' class='close' data-dismiss="modal"><span aria-hidden='true'>&times;</span></button>
+            </div>
+            <hr class="w-100 my-0" />
+            <div class='modal-body'>                
+                <div id="mensajeError" class="alert alert-danger">
+                    <div class="container">
+                        <div class="alert-icon">
+                            <i class="material-icons">error_outline</i>
+                        </div>
+                        <b id="lblAccion">&nbsp;</b><span id="textoMensajeError"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group bmd-form-group">
+                            <label for="edLogin" class="bmd-label-floating">Identificación (login)</label>
+                            <input type="text" class="form-control" id="edLogin" style="background-color: white;" />
+                            <span class="bmd-help">RUT o Login de Acceso al Sistema. No se podrá modificar</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6"></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="form-group bmd-form-group">
+                            <label for="edNombre" class="bmd-label-floating">Nombre</label>
+                            <input type="text" class="form-control" id="edNombre" >
+                            <span class="bmd-help">Nombre completo del Usuario</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group bmd-form-group">
+                            <label for="edEmail" class="bmd-label-floating">Correo Electrónico</label>
+                            <input type="text" class="form-control" id="edEmail" style="background-color: white;" />
+                            <span class="bmd-help">Se le enviarán instrucciones a este correo para crear contraseña</span>
+                        </div>
+                    </div>                    
+                </div>
+                <hr class="w-100 my-2" />
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="togglebutton">
+                            <label>
+                                <input id="edAdmin" type="checkbox" checked="">
+                                    <span class="toggle"></span>
+                                        Usuario es Administrador de este Sistema
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-4"></div>
+                </div> 
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="togglebutton">
+                            <label>
+                                <input id="edActivo" type="checkbox" checked="">
+                                    <span class="toggle"></span>
+                                        El Usuario está activo (puede usar el Sistema)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-4"></div>
+                </div>                    
+            </div>
+            <div class='modal-footer'>
+                <button id="cmdOk" class='btn btn-primary mr-2' type="button">Aceptar
+                <i id="loadingButton" style="color:white"></i>
+            </button>
+                <button id="cmdCancel" class='btn btn-default' type="button">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,2 @@
+class CustomController extends ZCustomComponent {
+}

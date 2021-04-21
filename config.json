@@ -1,0 +1,37 @@
+{
+    "webServer":{
+        "http":{"port":8085}
+    },
+    "pgCMMS":{
+        "user":"postgres",
+        "password":"postgres",
+        "database":"cmms",
+        "host":"localhost",
+        "port":5432,
+        "max":10,
+        "idleTimeoutMillis":30000
+    },
+    "pgPERFILES":{
+        "user":"postgres",
+        "password":"postgres",
+        "database":"agunsa-perfiles",
+        "host":"localhost",
+        "port":5432,
+        "max":10,
+        "idleTimeoutMillis":30000
+    },
+    "smtp":{
+        "service": "gmail",
+        "host": "smtp.gmail.com",
+        "port": 587,
+        "auth":{
+            "user":"francoenviomail@gmail.com", 
+            "pass":"50cent93"
+        },
+        "from": "CMMS <noreply@gmail.com>"
+    },
+    "general":{
+        "urlSitioCorreo":"http://localhost:8085",
+        "bearerTokenCMMS": "cmms-btCNcYdBk4Zb7fEvKkdFYqvhqqUCHkipIO7BGwUAnXfSAfoBOlLVMi1NUERPYtErN56826ZRKbFInRT4dd13oD7MWb8JCwvhRfEr"
+    }
+}

@@ -1,0 +1,40 @@
+<div class='modal fade' tabindex='-1' aria-hidden="true">
+    <div class='modal-dialog ' role='document'>
+        <div class='modal-content'>
+            <div class='modal-header bg-secondary text-white'>
+                <h5 id="title" class='modal-title pt-0 pb-0 mt-0 bt-0'>[Acción] Grupo</h5>
+                <button  type='button' class='close text-white' data-dismiss="modal"><span aria-hidden='true'>&times;</span></button>
+            </div>
+            <hr class="w-100 my-0" />
+            <div class='modal-body'>                
+                <div id="mensajeError" class="alert alert-danger">
+                    <div class="container">
+                        <div class="alert-icon">
+                            <i class="material-icons">error_outline</i>
+                        </div>
+                        <b id="lblAccion">&nbsp;</b><span id="textoMensajeError"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6"></div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group bmd-form-group">
+                            <label for="edNombre" class="bmd-label-floating">Nombre</label>
+                            <input type="text" class="form-control" id="edNombre" >
+                            <span class="bmd-help">Nombre del nuevo grupo</span>
+                        </div>
+                    </div>
+                               
+                </div>
+
+                 
+            </div>
+            <div class='modal-footer'>
+                <button id="cmdOk" class='btn btn-primary mr-2' type="button">Aceptar</button>
+                <button id="cmdCancel" class='btn btn-default' type="button">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div style="min-height: 200px;">
+    <ul class="nav nav-tabs" id="folders" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="preview" data-toggle="tab" href="#previewTab" role="tab">Preview</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="files" data-toggle="tab" href="#filesTab" role="tab">Files</a>
+        </li>
+    </ul>
+    <div class="tab-content" id="demoContent">
+        <div class="tab-pane fade show active" id="previewTab" role="tabpanel">
+            <div id="previewLoader" data-z-autoload="common/Empty"></div>
+        </div>
+        <div class="tab-pane fade" id="filesTab" role="tabpanel">
+            <div class="row">
+                <div class="col pr-4">
+                    <select id="edFile" class="custom-select m-2" data-z-id-field="name" data-z-label-field="name"></select>
+                </div>
+            </div>
+            <div class="row">
+                <div id="editorContainer" class="col">
+                    <!-- <div id="ed-9999" class="ml-2 border rounded" style="height: 100%;"></div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

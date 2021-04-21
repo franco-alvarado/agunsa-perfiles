@@ -1,0 +1,79 @@
+<div class="container">
+    <!--TITULO PRINCIPAL-->
+    <div class="navbar navbar-expand-lg bg-primary py-0">
+        <div class="container">
+            <div class="navbar-brand">
+                    <p class="h5">Listado de privilegios por Usuario</p>
+                </div>
+        </div>
+    </div>
+
+    <div class="row mb-0">
+        <!--CUADRO USUARIOS-->
+        <div class="col-md-5">
+            <div class="navbar navbar-expand-sm py-0 mt-0 mb-0">
+                <div class="container bg-secondary rounded">
+                    <div class="navbar-brand text-white">
+                            <p class="h5">Usuarios</p>
+                        Usuarios</div>
+                    <form class="form-inline ml-auto">
+                        <div id="edFiltroUsuario" data-z-component="common/SearchField"></div>
+                    </form>
+                </div>
+            </div>
+            <div class="card mt-0 rounded">
+                <div class="card-body">
+                    <table id="listaUsuarios" data-z-table="true" class="table table-lg table-hover table-striped table-bordered img-raised"
+                        data-z-edit="false" data-z-edit-header-class="th-tabla-custom" data-z-edit-cell-class="td-tabla-custom pt-1"
+                        data-z-selectable-row-class="table-primary" data-z-page-details="detalle-listaUsuarios"
+                        data-z-pager="paginador-listaUsuarios" style="font-size:90%;">
+                        <thead>
+                            <tr class="font-weight-bold ">
+                                <th data-z-col="login" class="th-tabla-custom mh-100" data-z-cell-class="td-tabla-custom pt-1">Login</th>
+                                <th data-z-col="nombre" class="th-tabla-custom mh-100" data-z-cell-class="td-tabla-custom pt-1">Nombre</th>
+
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <div class="row justify-content-center">
+                        <small id="detalle-listaUsuarios" class="form-text text-muted"></small>
+                    </div>
+                    <div class="row justify-content-center">
+                        <ul id="paginador-listaUsuarios" class="pagination pagination-sm pagination-centered"
+                            data-z-pagination="local" data-z-n-rows="10" data-z-n-pages="20"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--FIN CUADRO USUARIOS-->
+
+        <!--CUADRO privilegios-->
+        <div class="col-md-7">
+                <div class="card mt-0">
+
+            <div class="navbar navbar-expand-sm py-0 mt-0 mb-0">
+                <div class="container bg-secondary rounded">
+                    <div class="navbar-brand text-white">
+                            <p class="h5">Privilegios Asignados</p>
+                        </div>
+                </div>
+            </div>
+            <div class="container mt-3 mb-3">
+                <div id="colorInfoPermisos" class="navbar">
+                    <div class="navbar-brand"></div>
+                    <form class="form-inline ml-4">
+                        <p id="mensajePermisos" class=""></p>
+                    </form>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="col-lg-12">
+                    <div id="treePrivilegios" class="tree" data-z-tree="true" class=""></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</div>

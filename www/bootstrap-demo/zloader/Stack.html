@@ -1,0 +1,17 @@
+<div>
+    <h1>ZAutoLoad - Stacked Transitions</h1>
+    <hr />
+    <h4>Required imports</h4>
+    <ul>
+        <li>z-mvc.js</li>
+    </ul>
+    <hr />
+    <h4>Stacked Navigation Demo - Transitions</h4><br />
+    <p>Content pane is loaded on demand. Current content state is kept when new panel is 'pushed'. 'onThis_init()' is called on new loaded panel. 'onThis_deactivated()' is called on replaced panel on 'push' and 'onThis_activated()' is called when content is 'popped' and original panel is reactivated<br /></p>
+    <p>Events in container are captured using on'loaderId'_'eventName'. Different subcomponents can trigger same event name.<br /></p>
+    <br />
+    <div id="demo1" data-z-component="md-demo/common/Demo"></div>
+    <hr />
+    <div id="zLoaderAPI" data-z-component="md-demo/zloader/zLoaderAPI"></div>
+    <div id="zComponentAPI" data-z-component="common/ZComponentAPI"></div>
+</div>

@@ -1,0 +1,17 @@
+<div>
+    <h1>ZAutoLoad - Dynamic Content Replace</h1>
+    <hr />
+    <h4>Required imports</h4>
+    <ul>
+        <li>z-mvc.js</li>
+    </ul>
+    <hr />
+    <h4>Basic Demo - Panel Replacement</h4><br />
+    <p>Content pane is reloaded when updated, state is lost (counter restarted) and 'onThis_init()' is called every time it its loaded.<br /></p>
+    <p>Events in container are captured using on'loaderId'_'eventName'. Different subcomponents can trigger same event name (see file 'ReplaceDemo.js')<br /></p>
+    <br />
+    <div id="demo1" data-z-component="md-demo/common/Demo"></div>
+    <hr />
+    <div id="zLoaderAPI" data-z-component="bootstrap-demo/zloader/zLoaderAPI"></div>
+    <div id="zComponentAPI" data-z-component="common/ZComponentAPI"></div>
+</div>

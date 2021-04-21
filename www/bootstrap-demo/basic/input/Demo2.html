@@ -1,0 +1,28 @@
+<div class="p-2 m-2 border rounded">
+    <form class="m-2">
+        <div class="form-row">
+            <div class="col-md-8">
+                <label for="edEmail">Email</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">@</span>
+                    </div>
+                    <input id="edEmail" type="email" class="form-control" placeholder="user@domain.com" data-z-autochange-delay="300">
+                    <div class="invalid-feedback">
+                        Invalid e-mail
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <label for="edAge">Age</label>
+                <input id="edAge" type="number" min="0" max="150" class="form-control" placeholder="Age" data-z-autochange-delay="300">
+                <div class="invalid-feedback">
+                    Invalid Age
+                </div>
+                <div id="lblAgeValidationMessage" class="valid-feedback">
+                    valid message
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

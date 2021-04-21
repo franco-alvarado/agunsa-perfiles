@@ -1,0 +1,66 @@
+<div>    
+    <nav class="navbar navbar-expand-lg navbar-inverse fixed-top bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-translate">
+                <!--<img class="float-left" src="img/logo-agunsa-transparente.png" height="50" />-->
+                <img class="float-left p-2 border rounded" src="img/logo-aeropuertopuertomontt.png" height="50" style="background-color: rgba(255,255,255,0.9);" />
+                <div class="navbar-brand ml-3">PERFILES - Agunsa</div>   
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#contenedorOpciones">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>    
+            </div>
+            <div id="contenedorOpciones" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a id="cmdHome" href="#" class="nav-link">
+                            <i class="fas fa-home mr-1"></i>
+                            Inicio
+                        </a>
+                    </li>                    
+                    <!-- MENU USUARIOS-->
+                    <li id="itemUsuariosGlobal" class="nav-item dropdown">
+                        <a id="cmdUsuarioGlobal" href="#" class="nav-link" data-toggle="dropdown">                        
+                            <i class="fas fa-wrench mr-1"></i>
+                            Usuarios
+                        <div class="ripple-container"></div></a>
+                        
+                        <div class="dropdown-menu dropdown-menu">
+                            <h6 class="dropdown-header">Configurar Usuarios</h6>
+                            <div class="dropdown-divider"></div>
+                       
+                            <a id="cmdConfGrupos" href="#" class="dropdown-item">Roles y permisos</a>
+                            <a id="CmdConfUsuarios" href="#" class="dropdown-item">Listado Usuarios</a>
+                            <a id="CmdPrivilegiosUsuario" href="#" class="dropdown-item">Privilegios por Usuario</a>
+                        </div>
+                    </li>
+                    <li id="itemLog" class="nav-item">
+                            <a id="cmdLog" href="#" class="nav-link">
+                                <i class="fas fa-bug mr-1"></i>
+                                Log
+                            </a>
+                        </li>                 
+                    <li class="nav-item">
+                        <a id="cmdMiCuenta" href="#" data-toggle="dropdown" class="nav-link">
+                            <i class="fas fa-2x fa-user-circle mr-1"></i>                           
+                        <div class="ripple-container"></div></a>
+                        <div class="dropdown-menu dropdown-menu-right">
+                            <h6 id="lblNombreUsuario" class="dropdown-header">Mi Cuenta</h6>
+                            <a id="cmdCambiarPwd" href="#" class="dropdown-item">Cambiar mi Contraseña</a>
+                            <a id="cmdLogout" href="#" class="dropdown-item">Cerrar Sesión</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>                 
+    </nav>
+    <div id="vistaLoader" data-z-autoload="common/Empty" style="margin-top: 80px"></div>
+    <footer class="footer navbar-inverse fixed-bottom bg-dark pt-1" style="height: 30px;">
+        <div class="container-fluid">
+            <small id="lblFooterNombreUsuario" class="text-white float-left">[Nombre del Usuario Activo]</small>
+            <small class="text-white float-right">PERFILES: Sistema de Perfiles Agunsa. Versión 0.0.2</small>
+        </div>
+    </footer>
+</div>

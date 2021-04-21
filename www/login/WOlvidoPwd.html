@@ -1,0 +1,52 @@
+<div class='modal fade' tabindex='-1' aria-hidden="true">
+    <div class='modal-dialog modal-lg ' role='document'>
+        <div class='modal-content'>
+            <div class='modal-header'>
+                <h5 id="title" class='modal-title mt-0 mb-1'>Crear Nueva Contraseña</h5>
+                <button type='button' class='close' data-dismiss="modal"><span aria-hidden='true'>&times;</span></button>
+            </div>
+            <hr class="w-100 my-0" />
+            <div class='modal-body'>                
+                <div id="mensajeInfo" class="alert alert-info">
+                    <div class="container">
+                        <div class="alert-icon">
+                            <i class="material-icons">info_outline</i>
+                        </div>
+                        <b>Creación de Nueva Contraseña: </b><span>Ingrese su identificación de usuario o dirección de correo electrónico en el sistema CMMS. Se le enviará un correo con las instrucciones para crear una nueva contraseña de acceso.</span>
+                    </div>
+                </div>
+                <div id="mensajeError" class="alert alert-danger">
+                    <div class="container">
+                        <div class="alert-icon">
+                            <i class="material-icons">error_outline</i>
+                        </div>
+                        <b>Ha ocurrido un error:</b><span id="textoMensajeError"></span>
+                    </div>
+                </div>
+                <div id="mensajeEnviando" class="alert alert-info">
+                    <div class="container">
+                        <div class="alert-icon">
+                            <i class="fas fa-spinner fa-spin mr-2"></i>
+                        </div>
+                        <span>Enviando correo con instrucciones, por favor espere ...</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="form-group bmd-form-group">
+                            <label for="edLogin" class="bmd-label-floating">Identificación (login) o email</label>
+                            <input type="text" class="form-control" id="edLogin" />
+                            <span class="bmd-help">Ingrese su Identificación (login) o dirección de correo electrónico</span>
+                        </div>
+                    </div>
+                </div>                 
+            </div>
+            <div class='modal-footer'>
+                <button id="cmdOk" class='btn btn-primary mr-2' type="button">Aceptar
+                    <i style="color:white" id="loadingButton" class=""></i>
+                </button>
+                <button id="cmdCancel" class='btn btn-default' type="button">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</div>

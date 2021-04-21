@@ -1,0 +1,152 @@
+<div class="container-fluid">
+    <!--TITULO PRINCIPAL-->
+    <div class="navbar navbar-expand-lg bg-primary py-0">
+        <div class="container">
+            <div class="navbar-brand">
+                    <p class="h5">Administrar Grupos de perfiles</p>
+                </div>
+
+        </div>
+    </div>
+
+    <div class="row mb-0">
+        <!--CUADRO MANTENEDOR GRUPOS-->
+        <div class="col-md-4">
+            <div class="navbar navbar-expand-lg py-0 mb-0">
+                <div class="container bg-secondary text-white">
+                    <div class="col-md-4 ">
+                            <p class="h5">Grupos</p>
+                    </div>
+                    <div class="col-xs">
+                        <button id="cmdAddGrupo" type="button" class="btn btn-sm btn-success ">
+                            Agregar Grupo
+                            <i class="fas fa-plus-square ml-2"></i>
+                        </button>
+
+                    </div>
+                    <div class="col-sm-1"></div>
+                </div>
+
+            </div>
+            <div class="card mt-0">
+                <div class="card-body">
+                    <table id="lista" data-z-table="true" class="table table-lg table-hover table-striped table-bordered img-raised"
+                        data-z-edit="true" data-z-edit-header-class="th-tabla-custom" data-z-edit-cell-class="td-tabla-custom pt-1"
+                        data-z-selectable-row-class="table-primary" data-z-page-details="detalle-lista" data-z-pager="paginador-lista"
+                        style="font-size:90%;">
+                        <thead>
+                            <tr class="font-weight-bold ">
+                                <th data-z-col="nombre" class="th-tabla-custom mh-100" data-z-cell-class="td-tabla-custom pt-1"
+                                    data-z-editable="false">Nombre Grupo</th>
+
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <div class="row justify-content-center">
+                        <small id="detalle-lista" class="form-text text-muted"></small>
+                    </div>
+                    <div class="row justify-content-center">
+                        <ul id="paginador-lista" class="pagination pagination-sm pagination-centered" data-z-pagination="local"
+                            data-z-n-rows="10" data-z-n-pages="20"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--FIN CUADRO MANTENEDOR GRUPOS-->
+
+        <!--CUADRO PERMISOS Y USUARIOS-->
+        <div id="divPermisos" class="col-md-8">
+            <div class="navbar navbar-expand-lg py-0 mb-0">
+                <div class="container bg-secondary text-white">
+                    <!--TAB PERMISOS Y USUARIOS-->
+                    <div class="nav-tabs-navigation">
+                        <div class="nav-tabs-wrapper">
+                            <ul id="tabs" role="tablist" class="nav nav-tabs mt-1">
+                                <li class="nav-item">
+                                    <a id="tabUsuarios" data-toggle="tab" role="tab" class="nav-link active" href="#usuarios">Usuarios</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a id="tabPermisos" data-toggle="tab" role="tab" class="nav-link" href="#permisos">Permisos</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--FIN TAB PERMISOS Y USUARIOS-->
+
+                    <!--TEXTO TITULO GRUPO-->
+                    <div id="edTituloGrupo" class="navbar-brand" style="font-size: 0.9em">
+                    </div>
+                    <!--FIN TEXTO TITULO GRUPO-->
+
+                    <!--BOTON CONF PRIVILEGIOS-->
+                    <div id="grpConfigurarPrivilegios">
+                        <button id='cmdConfigurarPrivilegios' type='button' class='btn btn-sm btn-success'>
+                            Configurar Privilegios
+                            <i class='fas fa-plus-square ml-2'></i>
+                        </button>
+                    </div>
+                    <!--FIN BOTON AGREGAR PERMISO O USUARIO-->
+                </div>
+            </div>
+            <div class="card mt-0">
+                <div id="tabContent" class="tab-content responsive-tabs">
+                    <!--DETALLE USUARIO-->
+                    <div class="tab-pane fade show active" id="usuarios" role="tabpanel">
+                        <div class="card mt-1">
+                            <div class="navbar navbar-expand-sm bg-primary py-0">
+                                <div class="container">
+                                    <div class="navbar-brand"></div>
+                                    <form class="form-inline ml-auto">
+                                        <div id="edFiltroUsuario" data-z-component="common/SearchField"></div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <table id="listaUsuarios" data-z-table="true" class="table table-sm table-hover table-striped table-bordered img-raised"
+                                    data-z-edit-header-class="th-tabla-custom" data-z-edit-cell-class="td-tabla-custom pt-1"
+                                    data-z-selectable-row-class="table-primary" data-z-page-details="detalle-listaUsuarios"
+                                    data-z-pager="paginador-listaUsuarios" style="font-size:90%;">
+                                    <thead>
+                                        <tr class="tr font-weight-bold">
+                                            <th data-z-col="login" class="th-tabla-custom" data-z-cell-class="td-tabla-custom pt-1">Login</th>
+                                            <th data-z-col="nombre" class="th-tabla-custom" data-z-cell-class="td-tabla-custom pt-1">Nombre</th>
+                                            <th data-z-col="edAsignado" class="th-tabla-custom text-center"
+                                                data-z-cell-class="td-tabla-custom py-0 text-center">Asignar</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                                <hr>
+                                <div class="row justify-content-center">
+                                    <small id="detalle-listaUsuarios" class="form-text text-muted"></small>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <ul id="paginador-listaUsuarios" class="pagination pagination-sm pagination-centered"
+                                        data-z-pagination="local" data-z-n-rows="10" data-z-n-pages="20"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--DETALLE PERMISOS-->
+                    <div class="tab-pane fade" id="permisos" role="tabpanel">
+                        <div class="container mt-3 mb-3">
+                            <div id="colorInfo" class="navbar">
+                                <div class="navbar-brand"></div>
+                                <form class="form-inline ml-4">
+                                    <p id="divMensajePrivilegios" class=""></p>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="col-lg-12">
+                                <div id="tree" class="tree" data-z-tree="true" class=""></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,62 @@
+<div>
+    <h1>ZMV - Concepts</h1>
+    <hr />
+    <h4>Introducction</h4>
+    <p>
+        Z-MVC is a Modell View Controlles library focused on responsability separation and components reusability. Z-MVC is designed to
+        facilitate and drive de GUI design of complex web systems, including hybrid mobile applications.
+    </p>
+    <p>
+        View part of GUI is implemented using standard HTML 5 tags enhanced with some styling library (Bootstrap in this demo). 
+        Controller logic is implemented in ES7 classes wich represent custom controllers (composed by some other componentes) or basic
+        html components (HTML 5 elements).
+    </p>
+    <p>
+        Components comunicate with each other throuh its controllers. Each component can call methods on its component controllers
+        and can trigger events to its containers. Reusability is achieved by following a black-box principle: components can know
+        its child elements but thay cannot assume some behaviour in ints containers. When a component need to inform or obtain some
+        data from it container, it must use an event (decoupled integration). If it needs to obtain som data or activate some 
+        functionality in a child component, it can ask to it directly calling a method on its controller.
+    </p>
+    <p>
+        Every HTML element with an "id" is injected to its container controller as an instance of ZComponent class. Some elements
+        can be "known" by Z-MVC and injected as specific controller objects (ZButton, ZInput, etc.) and other, as generic div containers,
+        are injected as generic "ZComponent" controllers. For instance, if the view part of a component (its html file) defines a button 
+        tagged with 'id="cmdSave"' the controller can call: <code>this.cmdSave.disable()</code>. To define a handler to add some action 
+        when button is pressed, controller can define a method: <code>onCmdButton1_clik() {...}</code>.
+    </p>
+    <p>
+        Z-MVC is based on JQuery. Each controller (generic, basic, or custom) has access to its view element in the form o a JQuery
+        element called "view". View element is the root HTML element in the "html" file thar describes the view part of the component.
+    </p>
+    <p>
+        Components in Z-MVC are designed using two files: Component.html and Component.js, each one representing one part of the
+        MVC pattern (Modell is managed normally by standard JSON POST / GET invocations, and are not part of this implementation)
+    </p>
+    <p>
+        Event handlers are written in the "old Visual Basic Way". To define a hanlder for the event "eventName" triggered by element 
+        with id "component", controller just declares a method called <code>"onComponent_eventName(arguments) {...}"</code>.
+    </p>
+    <p>
+        Every GUI piece of and application should be designed as a component, even if it will not be reused in same or other application.
+        This will ensure separation of responsabilities, enhancing mantainance and standarizing the way the GUI is coded. 
+        There are severa ways to include a component in a GUI (in a conatiner componentes):        
+    </p>
+    <h4>First Component (Static Reference)</h4>
+    <p>
+        From the index page, use a div with id and data-z-component tag pointing to the Main component of your application. This way, 
+        all the dynamic and complex behaviour will be encapsulated within ZComponents. Main component could include and coordinate some basic 
+        components or dynamically change (see ZAutoLoad) between some CustomComponents according to user selection or application state. Static References
+        are specified as URL pointing to contained component (relative or absolute to site). Loaded controller is injected in container
+        controller as an object (ZCustomComponents wich is a ZComponent) throuh its controller, using its HTML "id" as name, so it can be accessed
+        from controller using <code>this.componentId</code>. <br />
+        Component in index page should be initiated after page load, using standar JQuery. <br />
+        In index.html add script: <code>$(document).ready(() => zInit("#main"))</code><br />
+        Inside body, add a div: with <code>id="main" data-z-component="Main"</code><br />
+        And start coding your application from Main.js and Main.html in root web folder.
+    </p>
+    <hr />
+    <h4>Hello World</h4>
+    <p>This is the basic Hello World example .. write your name and wait 300 [ms]</p>
+    <div id="demo1" data-z-component="bootstrap-demo/common/Demo"></div>  
+</div>
